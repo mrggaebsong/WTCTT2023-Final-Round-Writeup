@@ -3,4 +3,6 @@
 >
 > หมายเหตุ เมื่อได้รหัสลับดังกล่าวแล้วให้นำไปเข้ารหัส md5 ก่อนตอบ โดยรูปแบบของ Flag ที่เป็นคำตอบของข้อนี้คือ WCTF23{md5}
 
-Not Done
+น้องเราปล่อย writeup มาแล้วจ้า ไปตำ ด่วน
+
+https://medium.com/@kulnisc/wtctt2023-fah-loves-dad-network-security-200-pt-3fd3206d13d9
