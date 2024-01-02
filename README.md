@@ -6,6 +6,8 @@ Women Thailand Cyber Top Talent 2023 Final Round Writeup
 
 ### Web Application
 - Account Takeover v2
+- SQLi with no HMAC
+- Path Traversal over vHost v2
 
 ### Cloud Security
 - File Download
