@@ -8,7 +8,7 @@
 ```xml
 <string name="FLAG3_HINT">https://wtctt2023-secguy888-default-rtdb.asia-southeast1.firebasedatabase.app</string>
 ```
-ซึ่งเจ้าตัวนี้จะเป็น URL Firebase Database ที่ดูทรงแล้วอาจจะมีการ misconfig กันเกิดขึ้นที่อาจทำให้เรามี unauthorized read permission ที่จะสามารถเจข้าไปอ่านไฟล์ข้อมูลใร Firebase Database ได้ <br>
+ซึ่งเจ้าตัวนี้จะเป็น URL Firebase Database ที่ดูทรงแล้วอาจจะมีการ misconfig กันเกิดขึ้นที่อาจทำให้เรามี unauthorized read permission ที่จะสามารถเข้าไปอ่านไฟล์ข้อมูลใน Firebase Database ได้ <br>
 หนึ่งในวิธีการ enum ช่องโหว่นี้ก็จะเป็นการเติม `.json` เข้าไปท้าย URL ดังกล่าวเป็น
 ```
 https://wtctt2023-secguy888-default-rtdb.asia-southeast1.firebasedatabase.app/.json
