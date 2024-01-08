@@ -1,4 +1,4 @@
-![image](https://github.com/mrggaebsong/WTCTT2023-Final-Round-Writeup/assets/22939654/ddab4d03-d590-479b-bdf6-ba2f0e8d7765)![image](https://github.com/mrggaebsong/WTCTT2023-Final-Round-Writeup/assets/22939654/fdac30ce-63c2-4e54-9133-c2a1304a885d)# Path Traversal over vHost v2 [200 pts]
+# Path Travelsal over VHost v2 [200 pts]
 > Find another vHost, do Server-Side Request Forgery (SSRF) attack to get the flag. <br>
 > Flag Format: WTCTT2023_FINAL_WEB03{[a-z0-9]{32}} <br>
 > URL: http://chall3.final.wtctt2023.p7z.pw <br>
