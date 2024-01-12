@@ -17,7 +17,7 @@ hidden_media.png: PNG image data, 1280 x 720, 8-bit/color RGB, non-interlaced
 
 ![image](https://github.com/mrggaebsong/WTCTT2023-Final-Round-Writeup/assets/22939654/1f142355-dfbd-4623-b49c-021fc86f4815)
 
-ทีนี้เราก็เปิด Hex Fiend ขึ้นมาแล้วหาตัว PNG trailer เราจะเจอมันแต่ว่ามีอีกแสนล้าน bytes จ่อก้นอีกเป็นพรืด
+เราก็สงสัยว่ามีไฟล์ซ้อนหรือมี garbage bytes หรือเปล่า ทีนี้เราก็เปิด Hex Fiend ขึ้นมาแล้วหาตัว PNG trailer เราจะเจอมันแต่ว่ามีอีกแสนล้าน bytes จ่อก้นอีกเป็นพรืด
 
 ![image](https://github.com/mrggaebsong/WTCTT2023-Final-Round-Writeup/assets/22939654/6434b352-8a2a-4f00-b5a6-1d3a77f0c348)
 
