@@ -7,22 +7,22 @@
 เราจะได้ memory file มา ซึ่งน่ากลัวมากเพราะ dump มาจาก ransomware infected machine จริงๆ ซึ่งตรงนี้เราควรทำ self-quarantine vm ให้เรียบร้อยก่อนเริ่มต้น malware analyse <br>
 อ่านโจทย์ถึงคำใบ้ "รูบิคสีฟ้าที่ประกอบไม่เสร็จ" ซึ่งตรงนี้ก็หมายถึง Registry Editor แปลว่าเราต้องไปวิเคราะห์ memory dump เพื่อหารหัสลับใน registry <br>
 
-ก่อนอื่นก็ใช้ volatility ไปดูข้อมูล memory ก่อน
+ก่อนอื่นก็ใช้ volatility ไปดูข้อมูล memory ก่อน <br>
 `python vol.py -f ../SAW.mem imageinfo`
 ![image](https://github.com/mrggaebsong/WTCTT2023-Final-Round-Writeup/assets/22939654/8499ea3b-2996-40db-ac1b-f182d61dcdc0)
 
-มานั่งดูผล เราจะพบว่า suggest profile ของ memory นี้มาจาก `Win7SP1x64` ทีนี้เราลอง printkey ที่เก็บใน memory ออกมา
+มานั่งดูผล เราจะพบว่า suggest profile ของ memory นี้มาจาก `Win7SP1x64` ทีนี้เราลอง printkey ที่เก็บใน memory ออกมา <br>
 `python vol.py -f ../SAW.mem --profile=Win7SP1x64 printkey`
 ![image](https://github.com/mrggaebsong/WTCTT2023-Final-Round-Writeup/assets/22939654/feb3df53-98c4-4d38-9722-2c25e717bc16)
 
 เลื่อนลงมาเรื่อยๆจนมาเจอที่ไฟล์ `\??\Users\Mirthz\ntuser.dat` เราจะเจอ flag subkey "FLAG_HERE"
 ![image](https://github.com/mrggaebsong/WTCTT2023-Final-Round-Writeup/assets/22939654/cc4cd1b0-820e-4f43-8b00-a44296805497)
 
-ต่อไปเราต้อง dump hive เพื่อหา offset ของไฟล์ใน registry ด้วยคำสั่ง
+ต่อไปเราต้อง dump hive เพื่อหา offset ของไฟล์ใน registry ด้วยคำสั่ง <br>
 `python vol.py -f ../SAW.mem --profile=Win7SP1x64 hivelist`
 ![image](https://github.com/mrggaebsong/WTCTT2023-Final-Round-Writeup/assets/22939654/a873bf6c-4bf3-4b91-8a8b-e40593debaf8)
 
-พอเจอ offset ของไฟล์ ntuser.dat ที่ต้องการแล้ว นำ offset ไปค้นหา flag จาก subkey ในไฟล์ ntuser.dat จะได้เป็นข้อความ base64
+พอเจอ offset ของไฟล์ ntuser.dat ที่ต้องการแล้ว นำ offset ไปค้นหา flag จาก subkey ในไฟล์ ntuser.dat จะได้เป็นข้อความ base64 <br>
 `python vol.py -f ../SAW.mem --profile=Win7SP1x64 printkey -o 0xfffff8a0018fa010 -K "FLAG_HERE"`
 ![image](https://github.com/mrggaebsong/WTCTT2023-Final-Round-Writeup/assets/22939654/56ad9a1c-3a10-4762-b4b3-671b85c776bf)
 
