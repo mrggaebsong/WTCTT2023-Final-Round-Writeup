@@ -16,6 +16,8 @@ Women Thailand Cyber Top Talent 2023 Final Round Writeup
 
 ### Cryptography
 - Can you see me
+- XOR One-2-N
+- Really Base64
 
 ### Mobile Security
 - Hidden Message in APK v2
@@ -24,6 +26,12 @@ Women Thailand Cyber Top Talent 2023 Final Round Writeup
 
 ### Network Security
 (ถามว่าทำไมไม่เขียนเองในนี้ คืออยากดัน engagement ให้น้องค่ะ ทีมเดียวกันช่วยกันทำมาหากิน)
+- Access Denied
 - Ping Pong Show
 - Fah Loves Dad
 - Secret Chat
+
+### Digital Forensics
+- Hidden Media
+- Uptown Chunk
+- Saw XI EP.1 & EP.2
